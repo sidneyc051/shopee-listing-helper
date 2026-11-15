@@ -1,38 +1,4 @@
-====================================================================
-🛍️ 蝦皮 AI 智慧上架小工具 — 永久固定網址部署教學 (Streamlit Cloud)
-====================================================================
-
-【一、 上傳至 GitHub 的注意事項】
-1. 不可直接上傳 .zip 壓縮檔（Streamlit 無法讀取壓縮檔內的 app.py）。
-2. 請在 GitHub 專案頁面點選「Add file」->「Upload files」，將以下 5 個獨立檔案一次全選拖曳上傳至根目錄：
-   - app.py
-   - models_v1_1.py
-   - chart_generator_v1_1.py
-   - agent_pipeline_v1_1.py
-   - requirements.txt
-
-【二、 requirements.txt 必備內容】
-（若你尚未建立 requirements.txt，請新增一個純文字檔並貼上以下 4 行）
 google-genai>=1.0.0
 pydantic>=2.0.0
 pillow>=10.0.0
 streamlit>=1.35.0
-
-【三、 Streamlit Community Cloud 部署與永久儲存 API Key 步驟】
-1. 前往官網 https://streamlit.io/cloud 並使用 GitHub 帳號免費登入。
-2. 點選右上角「New app」：
-   - Repository：選擇你的 GitHub 專案（例如 shopee-listing-helper）
-   - Branch：保持 main
-   - Main file path：填入 app.py
-3. 設定永久 API Key（免每次手動輸入）：
-   - 點選「Advanced settings...」
-   - 在「Secrets」輸入框中貼上以下內容（請替換為你的實際金鑰）：
-     GEMINI_API_KEY = "你的實際_Gemini_API_Key"
-   - 點選「Save」儲存。
-4. 點選「Deploy!」，等待約 30~60 秒即會獲得永久固定網址（例如 https://xxx.streamlit.app）。
-
-【四、 iPhone 桌面 App 設定（以後免開電腦與 Colab）】
-1. 用 iPhone Safari 打開上述永久固定網址。
-2. 點選螢幕下方「分享」按鈕（方框向上箭頭）-> 選擇「加入主畫面」。
-3. 以後只需點開桌面圖示即可直接拍照上傳、查價、一鍵複製並切換至蝦皮 App 貼上。
-====================================================================

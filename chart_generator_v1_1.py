@@ -2,7 +2,7 @@
 import textwrap
 from PIL import Image, ImageDraw, ImageFont
 from typing import List
-from models import SizeChartRow
+from models_v1_1 import SizeChartRow
 
 
 def _load_cjk_font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont:
